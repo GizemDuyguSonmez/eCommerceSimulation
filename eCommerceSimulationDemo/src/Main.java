@@ -15,14 +15,14 @@ public class Main {
 				
 				AuthService authService = new AuthManager(userService, new UserValidationManager(), new EmailManager());
 				
-				authService.register(1, "Gizem Duygu", "Sönmez" ,"gizemduygu@hotmail.com", "***********");
+				authService.register(1, "Gizem Duygu", "SÃ¶nmez" ,"gizemduygu@hotmail.com", "***********");
 			
 				userService.verifyUser(1);
-				authService.login("gizemduygu@hotmail.com", "Giz26.02");
+				authService.login("gizemduygu@hotmail.com", "***********");
 				userService.verifyUser(1);
 				
 				AuthService googleAuthService = new GoogleAuthManagerAdapter();
-				googleAuthService.register(1, "Gizem Duygu", "Sönmez" ,"gizemduygu@hotmail.com", "***********");
+				googleAuthService.register(1, "Gizem Duygu", "SÃ¶nmez" ,"gizemduygu@hotmail.com", "***********");
 				googleAuthService.login("gizemduygu@hotmail.com", "*************");	
 				
 			}
